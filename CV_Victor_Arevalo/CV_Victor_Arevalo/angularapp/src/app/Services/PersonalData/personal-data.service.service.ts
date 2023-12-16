@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class PersonalDataServiceService {
 
-  private myAppUrl = "https://localhost:7206/"
+  private myAppUrl = "https://hvvamemoria.azurewebsites.net/"
   private myApiUrl = "api/PersonalData"
   constructor(private http: HttpClient) { }
 
