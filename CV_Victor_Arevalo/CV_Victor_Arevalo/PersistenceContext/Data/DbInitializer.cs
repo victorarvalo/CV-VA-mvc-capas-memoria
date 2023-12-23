@@ -680,7 +680,7 @@ namespace webapi.PersistenceContext.Data
                 new PersonalReference
                 {
                     name = "Alejandro Céspedes",
-                    celPhone = "3013414011",
+                    celPhone = "313 4224593",
                     email = null,
                     occupation = "Ingeniero de sistemas"
                 }

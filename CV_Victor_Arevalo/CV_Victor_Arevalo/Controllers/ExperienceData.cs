@@ -18,6 +18,7 @@ namespace webapi.Controllers
         public List<Models.ExperienceData> GetAllExperienceData()
         {
             List<Models.ExperienceData> experiences = _persistenceContext.ExperienceData.ToList();
+            experiences = experiences.OrderByDescending(x=>x.IdExperienceData).ToList();
             return experiences;
         }
     }
