@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SummaryDataServiceService } from "../../Services/SummaryData/summary-data.service.service"
+import { SummaryDataServiceService } from "./../../Services/SummaryData/summary-data.service.service"
 
 @Component({
   selector: 'app-summary',

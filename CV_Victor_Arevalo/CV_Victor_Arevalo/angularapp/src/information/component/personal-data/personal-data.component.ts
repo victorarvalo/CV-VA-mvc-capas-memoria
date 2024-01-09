@@ -1,5 +1,5 @@
 import { Component, OnInit, numberAttribute } from '@angular/core';
-import { PersonalDataServiceService } from '../../Services/PersonalData/personal-data.service.service'
+import { PersonalDataServiceService } from './../../Services/PersonalData/personal-data.service.service'
 
 @Component({
   selector: 'app-personal-data',

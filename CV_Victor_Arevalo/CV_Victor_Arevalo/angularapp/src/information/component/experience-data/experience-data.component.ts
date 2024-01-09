@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienceDataServiceService } from 'src/app/Services/ExperienceData/experience-data.service.service';
+import { ExperienceDataServiceService } from './../../Services/ExperienceData/experience-data.service.service'
 
 @Component({
   selector: 'app-experience-data',
   templateUrl: './experience-data.component.html',
   styleUrls: ['./experience-data.component.css']
 })
+
 export class ExperienceDataComponent implements OnInit{
   
   listExperienceData: any[] = [];
