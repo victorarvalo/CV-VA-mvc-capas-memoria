@@ -12,7 +12,7 @@ export class ExperienceDataComponent implements OnInit{
   @Input()
   experienceData: any;
 
-  listExperienceData: any[] = [];
+  visible = true;
 
   constructor(private _experienceData: ExperienceDataServiceService){
 
@@ -35,11 +35,7 @@ export class ExperienceDataComponent implements OnInit{
     }     
   }
 
-  backgroundColor(index: number){
-    if((index % 2) == 0){
-      return {'background-color': 'lightgrey'};
-    }else{
-      return {'background-color':'lightblue'};
-    }
+  toggle(){
+    this.visible = !this.visible;
   }
 }

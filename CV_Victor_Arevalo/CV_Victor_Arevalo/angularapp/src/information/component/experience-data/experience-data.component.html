@@ -1,15 +1,15 @@
 <div class="card">
     <div class="card-body">
-      <table class="table" >
-        <tr ><td>{{experienceData.startDate}} - {{experienceData.finishDate}}</td></tr>
-        <tr ><td>&emsp;<b>{{experienceData.enterprise}}</b></td></tr>
-        <tr ><td>&emsp;Teléfono: {{experienceData.phone}}</td></tr>
-        <tr ><td>&emsp;URL: {{experienceData.url}}</td></tr>
-        <tr ><td>&emsp;Cargo: {{experienceData.position}}</td></tr>
-        <tr ><td>&emsp;{{experienceData.summary}}</td></tr>
-        <tr *ngFor="let detail of experienceData.detailSummary;"><td>&emsp;-{{detail.detail}}</td></tr>
-        <tr *ngIf="experienceData.skills!=null"><td>Logros:</td></tr>
-        <tr *ngFor="let skil of experienceData.skills;"><td>&emsp;-{{skil.skil}}</td></tr>
+      <table class="table" (click)="toggle()">
+        <tr><td>{{experienceData.startDate}} - {{experienceData.finishDate}}</td></tr>
+        <tr><td>&emsp;<b>{{experienceData.enterprise}}</b></td></tr>
+        <tr><td>&emsp;Teléfono: {{experienceData.phone}}</td></tr>
+        <tr><td>&emsp;URL: {{experienceData.url}}</td></tr>
+        <tr><td>&emsp;Cargo: {{experienceData.position}}</td></tr>
+        <tr [hidden]="visible"><td>&emsp;{{experienceData.summary}}</td></tr>
+        <tr [hidden]="visible" *ngFor="let detail of experienceData.detailSummary;"><td>&emsp;-{{detail.detail}}</td></tr>
+        <tr [hidden]="visible" *ngIf="experienceData.skills!=null"><td>Logros:</td></tr>
+        <tr [hidden]="visible" *ngFor="let skil of experienceData.skills;"><td>&emsp;-{{skil.skil}}</td></tr>
       </table>
     </div>    
 </div>
