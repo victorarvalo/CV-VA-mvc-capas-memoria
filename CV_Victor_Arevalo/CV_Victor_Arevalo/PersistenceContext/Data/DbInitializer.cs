@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using webapi.Controllers;
 using webapi.Models;
 
 namespace webapi.PersistenceContext.Data
@@ -21,6 +22,7 @@ namespace webapi.PersistenceContext.Data
                 TypeTraining(_context);
                 ModalityTraining(_context);
                 EducationData(_context);
+                //DetailSummary(_context);
                 ExperienceData(_context);
                 PersonalReference(_context);
             }
@@ -34,7 +36,7 @@ namespace webapi.PersistenceContext.Data
             }
 
             _context.PersonalData.Add(
-                new PersonalData()
+                new Models.PersonalData()
                 {
                     name = "Víctor Manuel",
                     lastName = "Arévalo Fandiño",
@@ -54,12 +56,12 @@ namespace webapi.PersistenceContext.Data
             if(_context.SummaryData.Any()) { return; }
 
             _context.SummaryData.AddRange(
-                new SummaryData
+                new Models.SummaryData
                 {
                     Title = "OBJETIVOS PERSONALES",
                     Data = "Busco desarrollar un proyecto de vida que me permita crecer en forma individual a través de la participación activa y comprometida en cada uno de los aspectos que forman mi entorno personal, familiar, laboral, social y global. Este proceso de crecimiento se enmarca en condiciones personales como: Innovación y solución creativa de problemas, la participación activa y crítica en el trabajo en equipo, la capacidad de actuar en ambientes cambiantes y el liderazgo basado en la capacidad de orientar los esfuerzos grupales hacia el logro de objetivos."
                 },
-                new SummaryData
+                new Models.SummaryData
                 {
                     Title = "OBJETIVOS PROFESIONALES",
                     Data = "Espero desempeñar cargos de ingeniería en las áreas relacionadas con mi formación profesional y experiencia laboral, caracterizados por niveles de responsabilidad y que representan tanto un reto laboral como intelectual. Mi objetivo es contribuir a la generación de valor de las organizaciones y comunidades en las cuales me encuentre interactuando."
@@ -73,11 +75,11 @@ namespace webapi.PersistenceContext.Data
             if (_context.TypeTraining.Any()) { return; }
 
             _context.TypeTraining.AddRange(
-                new TypeTraining
+                new Models.TypeTraining
                 {
                     Type = "Academic"
                 },
-                new TypeTraining
+                new Models.TypeTraining
                 {
                     Type = "Business"
                 }
@@ -91,11 +93,11 @@ namespace webapi.PersistenceContext.Data
             if (_context.ModalityTraining.Any()) { return; }
 
             _context.ModalityTraining.AddRange(
-                new ModalityTraining
+                new Models.ModalityTraining
                 {
                     Modality = "In Person"
                 },
-                new ModalityTraining
+                new Models.ModalityTraining
                 {
                     Modality = "Virtual"
                 }
@@ -109,7 +111,7 @@ namespace webapi.PersistenceContext.Data
             if(_context.EducationData.Any()) { return; }
 
             _context.EducationData.AddRange(
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 1,
                     IdModalityTraining = 1,
@@ -119,7 +121,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "31/11/1999",
                     summary = ""
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 1,
                     IdModalityTraining = 1,
@@ -129,7 +131,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "27/04/2012",
                     summary = ""
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 2,
                     IdModalityTraining = 2,
@@ -139,7 +141,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = null,
                     summary = "Nivel: C2"
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 1,
                     IdModalityTraining = 2,
@@ -149,7 +151,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "01/12/2007",
                     summary = null
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 1,
                     IdModalityTraining = 2,
@@ -159,7 +161,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "15/12/2007",
                     summary = null
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 1,
                     IdModalityTraining = 2,
@@ -169,7 +171,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "15/12/2007",
                     summary = null
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 1,
                     IdModalityTraining = 2,
@@ -179,7 +181,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "01/05/2008",
                     summary = null
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 1,
                     IdModalityTraining = 2,
@@ -189,7 +191,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "15/05/2008",
                     summary = null
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 1,
                     IdModalityTraining = 2,
@@ -199,7 +201,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "01/06/2008",
                     summary = null
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 1,
                     IdModalityTraining = 2,
@@ -209,7 +211,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "15/09/2008",
                     summary = null
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 2,
                     IdModalityTraining = 2,
@@ -219,7 +221,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "01/10/2023",
                     summary = null
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 2,
                     IdModalityTraining = 2,
@@ -229,7 +231,7 @@ namespace webapi.PersistenceContext.Data
                     finishDate = "01/11/2023",
                     summary = null
                 },
-                new EducationData
+                new Models.EducationData
                 {
                     IdTypeTraining = 2,
                     IdModalityTraining = 2,
@@ -244,48 +246,50 @@ namespace webapi.PersistenceContext.Data
             _context.SaveChanges();
         }
 
+        private static void DetailSummary(PersistenceContext _context)
+        {
+            var detailTemp = new List<DetailSummary>();
+            var dtemp = new DetailSummary
+            {
+                detail = "Continuación en la programación del sistema de control y reportes de Central de Mezclas",
+                IdEducationData = 8
+            };
+            detailTemp.Add(dtemp);
+            _context.DetailSummarie.AddRange(detailTemp);
+        }
         private static void ExperienceData(PersistenceContext _context)
         {
             if (_context.ExperienceData.Any()) { return; }
 
-            _context.ExperienceData.AddRange(
-
-                new ExperienceData
-                {
-                    enterprise = "IQ Electronics",
-                    phone = "2955856",
-                    url = null,
-                    position = "Técnico en Reparación",
-                    summary = "Mi desempeño se centró principalmente en la logística, reparación y ensamble y de equipos electrónicos, encargados por nuestros clientes para la re-manufactura de los mismos.",
-                    detailSummary = null,
-                    skills = null,
-                    startDate = "01/03/2010",
-                    finishDate = "31/08/2010"
-                },
-                new ExperienceData
-                {
-                    enterprise = "Colvatel S.A. E.S.P",
-                    phone = "4387000",
-                    url = null,
-                    position = "Técnico de instalación",
-                    summary = "Mi desempeño se centró principalmente en la instalación y configuración de módems domiciliarios para la conexión a internet.",
-                    detailSummary = null,
-                    skills = null,
-                    startDate = "01/09/2010",
-                    finishDate = "30/11/2010"
-                },
-                new ExperienceData
-                {
-                    enterprise = "Automatización y Comunicaciones Industriales",
-                    phone = "6014124233",
-                    url = null,
-                    position = "Ingeniero de Proyectos",
-                    summary = "Realicé la parte logística y operativa de la prestación de servicios de asesoría y reparación en la parte de automatización y eléctrica de los clientes en la industria. Mi desempeño se centra principalmente en los siguientes aspectos:",
-                    detailSummary = new List<DetailSummary>
-                    {
+            var experience1 = new Models.ExperienceData
+            {
+                enterprise = "IQ Electronics",
+                phone = "2955856",
+                url = null,
+                position = "Técnico en Reparación",
+                summary = "Mi desempeño se centró principalmente en la logística, reparación y ensamble y de equipos electrónicos, encargados por nuestros clientes para la re-manufactura de los mismos.",
+                detailSummary = null,
+                skills = null,
+                startDate = "01/03/2010",
+                finishDate = "31/08/2010"
+            };
+            var experience2 = new Models.ExperienceData
+            {
+                enterprise = "Colvatel S.A. E.S.P",
+                phone = "4387000",
+                url = null,
+                position = "Técnico de instalación",
+                summary = "Mi desempeño se centró principalmente en la instalación y configuración de módems domiciliarios para la conexión a internet.",
+                detailSummary = null,
+                skills = null,
+                startDate = "01/09/2010",
+                finishDate = "30/11/2010"
+            };
+            var detailSummaryTemp = new List<DetailSummary>() {
                         new DetailSummary
                         {
-                            detail = "Asesoría y soporte telefónico de los sistemas de automatización de clientes"
+                            detail = "Asesoría y soporte telefónico de los sistemas de automatización de clientes",
+                            IdEducationData = 3
                         },
                         new DetailSummary
                         {
@@ -293,7 +297,7 @@ namespace webapi.PersistenceContext.Data
                         },
                         new DetailSummary
 
-                         {
+                        {
                             detail = "Programación e implementación de sistemas de control y supervisión de acuerdo a los requerimientos del proyecto"
                         },
                         new DetailSummary
@@ -301,7 +305,7 @@ namespace webapi.PersistenceContext.Data
                             detail = "Capacitación de personal encargado de las áreas operativas y de mantenimiento de los diferentes sistemas de automatización"
                         },
                         new DetailSummary
-                         {
+                        {
                             detail = "Desarrollo de la documentación de proyectos realizados por la compañía."
                         },
                         new DetailSummary
@@ -312,8 +316,8 @@ namespace webapi.PersistenceContext.Data
                         {
                             detail = "Asistencia en el diseño y dimensionamiento de proyectos de la parte de automatización"
                         }
-                    },
-                    skills = new List<Skill>
+                    };
+            var skillsTemp = new List<Skill>
                     {
                         new Skill
                         {
@@ -360,18 +364,21 @@ namespace webapi.PersistenceContext.Data
                                 skil = "Capacitación de Tia Portal V12 en las instalaciones de Sena"
 
                         }
-                    },
-                    startDate = "01/11/2010",
-                    finishDate = "31/10/2014"
-                },
-                new ExperienceData
-                {
-                    enterprise = "3 PULGADAS ING",
-                    phone = "6012678261",
-                    url = null,
-                    position = "Ingeniero de Proyectos",
-                    summary = "Realice la parte logística y operativa de la prestación de servicios de asesoría y reparación en la parte de automatización y eléctrica de los clientes en la industria. Mi desempeño se centra principalmente en los siguientes aspectos:",
-                    detailSummary = new List<DetailSummary>
+                    };
+
+            var experience3 = new Models.ExperienceData
+            {
+                enterprise = "Automatización y Comunicaciones Industriales",
+                phone = "6014124233",
+                url = null,
+                position = "Ingeniero de Proyectos",
+                summary = "Realicé la parte logística y operativa de la prestación de servicios de asesoría y reparación en la parte de automatización y eléctrica de los clientes en la industria. Mi desempeño se centra principalmente en los siguientes aspectos:",
+                detailSummary = detailSummaryTemp,
+                skills = skillsTemp,
+                startDate = "01/11/2010",
+                finishDate = "31/10/2014"
+            };
+            detailSummaryTemp = new List<DetailSummary>
                     {
                         new DetailSummary
                         {
@@ -390,8 +397,8 @@ namespace webapi.PersistenceContext.Data
                         {
                             detail = "Diseño y dimensionamiento de proyectos de la parte de automatización."
                         }
-                    },
-                    skills = new List<Skill>
+                    };
+            skillsTemp = new List<Skill>
                     {
                         new Skill
                         {
@@ -402,18 +409,20 @@ namespace webapi.PersistenceContext.Data
                                 skil = "Programación e implementación de Scada Mitsubishi"
 
                         }
-                    },
-                    startDate = "01/10/2014",
-                    finishDate = "31/01/2015"
-                },
-                new ExperienceData
-                {
-                    enterprise = "Process Solutions S.A.S.",
-                    phone = "6016052116",
-                    url = "",
-                    position = "Ingeniero de Soporte y Proyectos",
-                    summary = "Realicé la parte logística y operativa de la prestación de servicios de asesoría e implementación de proyectos de automatización:",
-                    detailSummary = new List<DetailSummary>
+                    };
+            var experience4 = new Models.ExperienceData
+            {
+                enterprise = "3 PULGADAS ING",
+                phone = "6012678261",
+                url = null,
+                position = "Ingeniero de Proyectos",
+                summary = "Realice la parte logística y operativa de la prestación de servicios de asesoría y reparación en la parte de automatización y eléctrica de los clientes en la industria. Mi desempeño se centra principalmente en los siguientes aspectos:",
+                detailSummary = detailSummaryTemp,
+                skills = skillsTemp,
+                startDate = "01/10/2014",
+                finishDate = "31/01/2015"
+            };
+            detailSummaryTemp = new List<DetailSummary>
                     {
                         new DetailSummary
                         {
@@ -422,8 +431,8 @@ namespace webapi.PersistenceContext.Data
                         {
                             detail = "Programación e implementación de sistemas de control y supervisión de acuerdo a los requerimientos del proyecto"
                         }
-                    },
-                    skills = new List<Skill>
+                    };
+            skillsTemp = new List<Skill>
                     {
                         new Skill
                         {
@@ -442,18 +451,20 @@ namespace webapi.PersistenceContext.Data
                                 skil = "Programación, implementación y soporte de comunicaciones de instrumentación de campo y PLC para PCS7"
 
                         }
-                    },
-                    startDate = "01/02/2015",
-                    finishDate = "30/03/2018"
-                },
-                new ExperienceData
-                {
-                    enterprise = "Delcop Colombia S.A.S. ",
-                    phone = "6014251180",
-                    url = null,
-                    position = "Ingeniero Programador",
-                    summary = "Realicé la parte operativa de los proyectos de implementación de facturación electrónica:",
-                    detailSummary = new List<DetailSummary>
+                    };
+            var experience5 = new Models.ExperienceData
+            {
+                enterprise = "Process Solutions S.A.S.",
+                phone = "6016052116",
+                url = "",
+                position = "Ingeniero de Soporte y Proyectos",
+                summary = "Realicé la parte logística y operativa de la prestación de servicios de asesoría e implementación de proyectos de automatización:",
+                detailSummary = detailSummaryTemp,
+                skills = skillsTemp,
+                startDate = "01/02/2015",
+                finishDate = "30/03/2018"
+            };
+            detailSummaryTemp = new List<DetailSummary>
                     {
                         new DetailSummary
                         {
@@ -465,8 +476,8 @@ namespace webapi.PersistenceContext.Data
                         {
                             detail = "Programación, implementación y pruebas de reportes de facturación electrónica"
                         }
-                    },
-                    skills = new List<Skill> {
+                    };
+            skillsTemp = new List<Skill> {
                         new Skill
                         {
                                 skil = "Coordinación de proyectos de implementación de facturación electrónica"
@@ -496,18 +507,20 @@ namespace webapi.PersistenceContext.Data
                                 skil = "Programación de consumo de Webservice REST y SOAP de diferentes plataformas para obtención y envío de información relacionado a proyectos de facturación electrónica"
 
                         }
-                    },
-                    startDate = "01/04/2018",
-                    finishDate = "31/01/2020"
-                },
-                new ExperienceData
-                {
-                    enterprise = "Robotec S.A.S",
-                    phone = "6015169651",
-                    url = null,
-                    position = "Desarrollador",
-                    summary = "Realicé la programación en C# y Python de los diferentes productos de software de la compañía:",
-                    detailSummary = new List<DetailSummary>
+                    };
+            var experience6 = new Models.ExperienceData
+            {
+                enterprise = "Delcop Colombia S.A.S. ",
+                phone = "6014251180",
+                url = null,
+                position = "Ingeniero Programador",
+                summary = "Realicé la parte operativa de los proyectos de implementación de facturación electrónica:",
+                detailSummary = detailSummaryTemp,
+                skills = skillsTemp,
+                startDate = "01/04/2018",
+                finishDate = "31/01/2020"
+            };
+            detailSummaryTemp = new List<DetailSummary>
                     {
                         new DetailSummary
                         {
@@ -519,8 +532,8 @@ namespace webapi.PersistenceContext.Data
                         {
                             detail = "Planeación, programación y puesta en marcha de software de grabación de sala de audiencias INVICT."
                         }
-                    },
-                    skills = new List<Skill>
+                    };
+            skillsTemp = new List<Skill>
                     {
                         new Skill
                         {
@@ -571,18 +584,20 @@ namespace webapi.PersistenceContext.Data
                                 skil = "Planeación y programación en Python para creación de servidor TCP con mensajería Json."
 
                         }
-                    },
-                    startDate = "01/02/2020",
-                    finishDate = "31/10/2021"
-                },
-                new ExperienceData
-                {
-                    enterprise = "Geovictoria",
-                    phone = null,
-                    url = "",
-                    position = "Desarrollador",
-                    summary = "Me encargué de la programación en C# de los diferentes componentes para la producción de reportes de los clientes de la plataforma GeoVictoria",
-                    detailSummary = new List<DetailSummary>
+                    };
+            var experience7 = new Models.ExperienceData
+            {
+                enterprise = "Robotec S.A.S",
+                phone = "6015169651",
+                url = null,
+                position = "Desarrollador",
+                summary = "Realicé la programación en C# y Python de los diferentes productos de software de la compañía:",
+                detailSummary = detailSummaryTemp,
+                skills = skillsTemp,
+                startDate = "01/02/2020",
+                finishDate = "31/10/2021"
+            };
+            detailSummaryTemp = new List<DetailSummary>
                     {
                         new DetailSummary
                         {
@@ -594,8 +609,8 @@ namespace webapi.PersistenceContext.Data
                         {
                             detail = "Programación de links de solicitud de reportes"
                         }
-                    },
-                    skills = new List<Skill>
+                    };
+            skillsTemp = new List<Skill>
                     {
                         new Skill
                         {
@@ -610,18 +625,20 @@ namespace webapi.PersistenceContext.Data
                                 skil = "Programación en arquitectura por capas"
 
                         }
-                    },
-                    startDate = "01/11/2021",
-                    finishDate = "04/01/2022"
-                },
-                new ExperienceData
-                {
-                    enterprise = "Oftalmos S.A.S.",
-                    phone = null,
-                    url = null,
-                    position = "Ingeniero Desarrollador",
-                    summary = "Me encargué de la programación en C# del nuevo software requerido para   la clínica y el soporte al software que actualmente se encuentra en producción",
-                    detailSummary = new List<DetailSummary>
+                    };
+            var experience8 = new Models.ExperienceData
+            {
+                enterprise = "Geovictoria",
+                phone = null,
+                url = "",
+                position = "Desarrollador",
+                summary = "Me encargué de la programación en C# de los diferentes componentes para la producción de reportes de los clientes de la plataforma GeoVictoria",
+                detailSummary = detailSummaryTemp,
+                skills = skillsTemp,
+                startDate = "01/11/2021",
+                finishDate = "04/01/2022"
+            };
+            detailSummaryTemp = new List<DetailSummary>
                     {
                         new DetailSummary
                         {
@@ -636,8 +653,8 @@ namespace webapi.PersistenceContext.Data
                         {
                             detail = "Soporte al software de control de citas, cirugías y facturación de la clínica "
                         }
-                    },
-                    skills = new List<Skill>
+                    };
+            skillsTemp = new List<Skill>
                     {
                         new Skill
                         {
@@ -652,13 +669,33 @@ namespace webapi.PersistenceContext.Data
                                 skil = "Creación y modificación de procedimientos almacenados en SQL Server"
 
                         }
-                    },
-                    startDate = "03/02/2022",
-                    finishDate = "07/10/2023"
-                }
+                    };
+            var experience9 = new Models.ExperienceData
+            {
+                enterprise = "Oftalmos S.A.S.",
+                phone = null,
+                url = null,
+                position = "Ingeniero Desarrollador",
+                summary = "Me encargué de la programación en C# del nuevo software requerido para   la clínica y el soporte al software que actualmente se encuentra en producción",
+                detailSummary = detailSummaryTemp,
+                skills = skillsTemp,
+                startDate = "03/02/2022",
+                finishDate = "07/10/2023"
+            };
+            _context.ExperienceData.AddRange(
+                experience1,
+                experience2,
+                experience3,
+                experience4,
+                experience5,
+                experience6,
+                experience7,
+                experience8,
+                experience9
             );
 
             _context.SaveChanges();
+
         }
 
         private static void PersonalReference(PersistenceContext _context)
@@ -670,14 +707,14 @@ namespace webapi.PersistenceContext.Data
 
             _context.personalReference.AddRange(
             
-                new PersonalReference
+                new Models.PersonalReference
                 {
                     name = "Gilberto Becerra",
                     celPhone = "3153313587",
                     email = null,
                     occupation = "Ingeniero Electricista"
                 },
-                new PersonalReference
+                new Models.PersonalReference
                 {
                     name = "Alejandro Céspedes",
                     celPhone = "313 4224593",

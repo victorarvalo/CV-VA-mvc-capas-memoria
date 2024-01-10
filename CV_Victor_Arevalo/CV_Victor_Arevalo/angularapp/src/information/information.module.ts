@@ -9,6 +9,7 @@ import { FullinformationComponent } from './component/fullinformation/fullinform
 import { InformationRoutingModule } from './information-routing.module';
 import { ExperienceDataComponent } from './component/experience-data/experience-data.component';
 import { PersonalReferenceDataComponent } from './component/personal-reference-data/personal-reference-data.component';
+import { ExperienDataListComponent } from './component/experien-data-list/experien-data-list.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PersonalReferenceDataComponent } from './component/personal-reference-d
     EducationDataComponent,
     ExperienceDataComponent,
     PersonalReferenceDataComponent,
-    FullinformationComponent],
+    FullinformationComponent,
+    ExperienDataListComponent],
   imports: [
     CommonModule, BrowserModule, HttpClientModule, InformationRoutingModule
   ]

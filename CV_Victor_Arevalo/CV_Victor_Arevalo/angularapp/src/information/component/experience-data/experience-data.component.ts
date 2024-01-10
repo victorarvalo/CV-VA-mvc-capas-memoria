@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ExperienceDataServiceService } from './../../Services/ExperienceData/experience-data.service.service'
 
 @Component({
@@ -9,6 +9,9 @@ import { ExperienceDataServiceService } from './../../Services/ExperienceData/ex
 
 export class ExperienceDataComponent implements OnInit{
   
+  @Input()
+  experienceData: any;
+
   listExperienceData: any[] = [];
 
   constructor(private _experienceData: ExperienceDataServiceService){
@@ -16,29 +19,20 @@ export class ExperienceDataComponent implements OnInit{
   }
   
   ngOnInit(): void {
-    this._experienceData.getListExperienceData().subscribe(data => {
-      data.forEach((element: {
-        startDate: string; finishDate: string 
-}) => {
-        if(element.finishDate != null){
-          var sfinishedDate: string[] = element.finishDate.split("/");
+    let startDate: string; 
+    let finishDate: string;
+    if(this.experienceData.finishDate != null){
+      var sfinishedDate: string[] = this.experienceData.finishDate.split("/");
           var finishedDate: String = new Date(parseInt(sfinishedDate[2]),parseInt(sfinishedDate[1]),parseInt(sfinishedDate[0]))
           .toLocaleDateString('es-co',{year:'numeric',month:'long'});
-          element.finishDate = finishedDate.toString().toUpperCase();
-        }
-        if(element.startDate != null){
-          var sstartDate: string[] = element.startDate.split("/");
-          var startedDate: String = new Date(parseInt(sstartDate[2]),parseInt(sstartDate[1]),parseInt(sstartDate[0]))
-          .toLocaleDateString('es-co',{year:'numeric',month:'long'});
-          element.startDate = startedDate.toString().toUpperCase();
-        }
-      })
-      this.listExperienceData = data;
-      console.log(data);
-    },
-    error => {
-      console.log(error);
-    })
+          this.experienceData.finishDate = finishedDate.toString().toUpperCase();
+    }
+    if(this.experienceData.startDate != null){
+      var sstartDate: string[] = this.experienceData.startDate.split("/");
+      var startedDate: String = new Date(parseInt(sstartDate[2]),parseInt(sstartDate[1]),parseInt(sstartDate[0]))
+      .toLocaleDateString('es-co',{year:'numeric',month:'long'});
+      this.experienceData.startDate = startedDate.toString().toUpperCase();
+    }     
   }
 
   backgroundColor(index: number){
