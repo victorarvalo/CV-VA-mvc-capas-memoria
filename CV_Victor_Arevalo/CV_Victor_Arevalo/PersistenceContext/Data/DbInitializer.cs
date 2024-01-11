@@ -456,7 +456,7 @@ namespace webapi.PersistenceContext.Data
             {
                 enterprise = "Process Solutions S.A.S.",
                 phone = "6016052116",
-                url = "",
+                url = null,
                 position = "Ingeniero de Soporte y Proyectos",
                 summary = "Realicé la parte logística y operativa de la prestación de servicios de asesoría e implementación de proyectos de automatización:",
                 detailSummary = detailSummaryTemp,
@@ -630,7 +630,7 @@ namespace webapi.PersistenceContext.Data
             {
                 enterprise = "Geovictoria",
                 phone = null,
-                url = "",
+                url = null,
                 position = "Desarrollador",
                 summary = "Me encargué de la programación en C# de los diferentes componentes para la producción de reportes de los clientes de la plataforma GeoVictoria",
                 detailSummary = detailSummaryTemp,

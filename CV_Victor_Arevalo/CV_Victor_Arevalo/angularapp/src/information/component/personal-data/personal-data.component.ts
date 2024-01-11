@@ -1,6 +1,7 @@
 import { Component, OnInit, numberAttribute } from '@angular/core';
 import { PersonalDataServiceService } from './../../Services/PersonalData/personal-data.service.service'
 
+
 @Component({
   selector: 'app-personal-data',
   templateUrl: './personal-data.component.html',
@@ -9,7 +10,6 @@ import { PersonalDataServiceService } from './../../Services/PersonalData/person
 export class PersonalDataComponent implements OnInit{
 
   listPersonalData: any[] = [];
-
   constructor(private _personalData: PersonalDataServiceService){
 
   }

@@ -11,6 +11,7 @@ import { ExperienceDataComponent } from './component/experience-data/experience-
 import { PersonalReferenceDataComponent } from './component/personal-reference-data/personal-reference-data.component';
 import { ExperienDataListComponent } from './component/experien-data-list/experien-data-list.component';
 
+import { MaterialModelModule } from './../app/material.model/material.model.module'
 
 @NgModule({
   declarations: [PersonalDataComponent,
@@ -21,7 +22,8 @@ import { ExperienDataListComponent } from './component/experien-data-list/experi
     FullinformationComponent,
     ExperienDataListComponent],
   imports: [
-    CommonModule, BrowserModule, HttpClientModule, InformationRoutingModule
+    CommonModule, BrowserModule, HttpClientModule, InformationRoutingModule,
+    MaterialModelModule
   ]
 })
 export class InformationModule { }

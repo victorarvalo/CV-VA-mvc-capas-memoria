@@ -14,6 +14,13 @@ export class ExperienceDataComponent implements OnInit{
 
   visible = true;
 
+  //datasources tables
+  detailSummaryDataSource: any[] = [];
+  skillsDataSource: any[] = [];
+  //displayColumns
+  detailSummaryDisplayColumns = ['detail'];
+  skillsDisplayColumns = ['skil'];
+
   constructor(private _experienceData: ExperienceDataServiceService){
 
   }
@@ -33,6 +40,9 @@ export class ExperienceDataComponent implements OnInit{
       .toLocaleDateString('es-co',{year:'numeric',month:'long'});
       this.experienceData.startDate = startedDate.toString().toUpperCase();
     }     
+
+    this.detailSummaryDataSource = this.experienceData.detailSummary;
+    this.skillsDataSource = this.experienceData.skills;
   }
 
   toggle(){

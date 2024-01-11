@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { NavComponent } from './nav/nav.component'
 import { InformationModule } from 'src/information/information.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,12 @@ import { InformationModule } from 'src/information/information.module';
     NavComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, AppRoutingModule, AngularSvgIconModule.forRoot(), InformationModule
+    BrowserModule, 
+    HttpClientModule, 
+    AppRoutingModule, 
+    AngularSvgIconModule.forRoot(),
+    InformationModule, 
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
