@@ -1,18 +1,3 @@
-<div class="card" (click)="toggle()">
-    <div class="card-body">
-      <table class="table">
-        <tr><td>{{experienceData.startDate}} - {{experienceData.finishDate}}</td></tr>
-        <tr><td>&emsp;<b>{{experienceData.enterprise}}</b></td></tr>
-        <tr><td>&emsp;Teléfono: {{experienceData.phone}}</td></tr>
-        <tr><td>&emsp;URL: {{experienceData.url}}</td></tr>
-        <tr><td>&emsp;Cargo: {{experienceData.position}}</td></tr>
-        <tr [hidden]="visible"><td>&emsp;{{experienceData.summary}}</td></tr>
-        <tr [hidden]="visible" *ngFor="let detail of experienceData.detailSummary;"><td>&emsp;-{{detail.detail}}</td></tr>
-        <tr [hidden]="visible" *ngIf="experienceData.skills!=null"><td>Logros:</td></tr>
-        <tr [hidden]="visible" *ngFor="let skil of experienceData.skills;"><td>&emsp;-{{skil.skil}}</td></tr>
-      </table>
-    </div>    
-</div>
 <div class="card">
   <div class="card-body">
     <mat-card class="mat-card">
@@ -31,7 +16,7 @@
             <mat-table class="matTable" [dataSource]="detailSummaryDataSource" fixedLayout>
               <ng-container matColumnDef="detail">
                 <th mat-header-cell *matColumnDef></th>
-                <td mat-cell *matCellDef="let detail">{{detail.detail}}</td>
+                <td mat-cell *matCellDef="let detail">° {{detail.detail}}</td>
               </ng-container>
               <tr class="matTr" mat-row *matRowDef="let row; columns: detailSummaryDisplayColumns"></tr>
             </mat-table>
@@ -43,9 +28,9 @@
             <mat-table class="matTable" [dataSource]="skillsDataSource" fixedLayout>
               <ng-container matColumnDef="skil">
                 <th mat-header-cell *matHeaderCellDef></th>
-                <td mat-cell *matCellDef="let skil">{{skil.skil}}</td>
+                <td mat-cell *matCellDef="let skil">° {{skil.skil}}</td>
               </ng-container>
-              <tr class="matTr" mat-row *matRowDef="let row; columns: skillsDisplayColumns"></tr>
+                <tr class="matTr" mat-row *matRowDef="let row; columns: skillsDisplayColumns"></tr>        
             </mat-table>
           </mat-card-content>
         </mat-card>
