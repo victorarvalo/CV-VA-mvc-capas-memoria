@@ -12,7 +12,8 @@ import { PersonalReferenceDataComponent } from './component/personal-reference-d
 import { ExperienDataListComponent } from './component/experien-data-list/experien-data-list.component';
 
 import { MaterialModelModule } from './../app/material.model/material.model.module';
-import { SummaryDataListComponent } from './component/summary-data-list/summary-data-list.component'
+import { SummaryDataListComponent } from './component/summary-data-list/summary-data-list.component';
+import { EducationDataListComponent } from './component/education-data-list/education-data-list.component'
 
 @NgModule({
   declarations: [PersonalDataComponent,
@@ -22,7 +23,8 @@ import { SummaryDataListComponent } from './component/summary-data-list/summary-
     PersonalReferenceDataComponent,
     FullinformationComponent,
     ExperienDataListComponent,
-    SummaryDataListComponent],
+    SummaryDataListComponent,
+    EducationDataListComponent],
   imports: [
     CommonModule, BrowserModule, HttpClientModule, InformationRoutingModule,
     MaterialModelModule
