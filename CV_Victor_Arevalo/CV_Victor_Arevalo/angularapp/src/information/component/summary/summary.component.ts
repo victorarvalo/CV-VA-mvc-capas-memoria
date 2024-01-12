@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SummaryDataServiceService } from "./../../Services/SummaryData/summary-data.service.service"
 
 @Component({
@@ -8,25 +8,13 @@ import { SummaryDataServiceService } from "./../../Services/SummaryData/summary-
 })
 export class SummaryComponent implements OnInit{
 
-  listSummaryData: any[] = [];
+  @Input() summaryData: any; 
 
   constructor(private _summaryData: SummaryDataServiceService){
 
   }
+  
   ngOnInit(): void {
-    this._summaryData.getListPersonalData().subscribe((data: any[]) => {
-      this.listSummaryData = data;
-      console.log(data);
-    },
-    (error: any) => {
-      console.log(error);
-    })
-  }
-  backgroundColor(index: number){
-    if((index % 2) == 0){
-      return {'background-color': 'lightgrey'};
-    }else{
-      return {'background-color':'lightblue'};
-    }
+    
   }
 }

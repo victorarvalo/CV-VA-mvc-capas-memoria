@@ -11,7 +11,8 @@ import { ExperienceDataComponent } from './component/experience-data/experience-
 import { PersonalReferenceDataComponent } from './component/personal-reference-data/personal-reference-data.component';
 import { ExperienDataListComponent } from './component/experien-data-list/experien-data-list.component';
 
-import { MaterialModelModule } from './../app/material.model/material.model.module'
+import { MaterialModelModule } from './../app/material.model/material.model.module';
+import { SummaryDataListComponent } from './component/summary-data-list/summary-data-list.component'
 
 @NgModule({
   declarations: [PersonalDataComponent,
@@ -20,7 +21,8 @@ import { MaterialModelModule } from './../app/material.model/material.model.modu
     ExperienceDataComponent,
     PersonalReferenceDataComponent,
     FullinformationComponent,
-    ExperienDataListComponent],
+    ExperienDataListComponent,
+    SummaryDataListComponent],
   imports: [
     CommonModule, BrowserModule, HttpClientModule, InformationRoutingModule,
     MaterialModelModule

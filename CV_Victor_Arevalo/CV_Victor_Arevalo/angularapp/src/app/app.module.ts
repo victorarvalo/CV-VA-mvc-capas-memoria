@@ -10,10 +10,12 @@ import { InformationModule } from 'src/information/information.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent
+    
   ],
   imports: [
     BrowserModule, 
