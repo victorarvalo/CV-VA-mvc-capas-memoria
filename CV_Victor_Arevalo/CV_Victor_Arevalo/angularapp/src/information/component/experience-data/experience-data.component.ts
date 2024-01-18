@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ExperienceDataServiceService } from './../../Services/ExperienceData/experience-data.service.service'
+
 
 @Component({
   selector: 'app-experience-data',
@@ -21,7 +21,7 @@ export class ExperienceDataComponent implements OnInit{
   detailSummaryDisplayColumns = ['detail'];
   skillsDisplayColumns = ['skil'];
 
-  constructor(private _experienceData: ExperienceDataServiceService){
+  constructor(){
 
   }
   

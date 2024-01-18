@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
     <div class="card-body">
       <h5 class="titulo text-center">REFERENCIAS PERSONALES</h5>
       <table class="table" *ngFor="let reference of listPersonalReference;index as i">
@@ -8,4 +8,14 @@
         <tr [ngStyle]="backgroundColor(i)"><td>Ocupación: {{reference.occupation}}</td></tr>
     </table>
     </div>
+</div> -->
+<div class="card">
+  <div class="card-body">
+    <mat-card class="mat-card">
+      <mat-card-title class="mat-card-title">{{personalReference.name}}</mat-card-title>
+      <mat-card-title class="mat-card-title">{{personalReference.celPhone}}</mat-card-title>
+      <mat-card-title class="mat-card-title">{{personalReference.email}}</mat-card-title>
+      <mat-card-title class="mat-card-title">{{personalReference.occupation}}</mat-card-title>
+    </mat-card>
+  </div>
 </div>

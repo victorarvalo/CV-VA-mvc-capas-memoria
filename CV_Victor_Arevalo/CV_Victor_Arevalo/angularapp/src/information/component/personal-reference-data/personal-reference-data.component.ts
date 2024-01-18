@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { PersonalReferenceDataServiceService } from './../../Services/PersonalReferenceData/personal-reference-data.service.service';
+import { Component, Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-personal-reference-data',
@@ -8,20 +8,15 @@ import { PersonalReferenceDataServiceService } from './../../Services/PersonalRe
 })
 export class PersonalReferenceDataComponent implements OnInit {
   
-  listPersonalReference: any[] = [];
+  @Input() 
+  personalReference: any;
 
-  constructor(private _personalReference: PersonalReferenceDataServiceService){
+  constructor(){
 
   }
   
   ngOnInit(): void {
-    this._personalReference.getListPersonalReferenceData().subscribe(data=>{
-      this.listPersonalReference = data;
-      console.log(data);
-    },
-    error=>{
-      console.log(error);
-    })
+    
   }
 
   backgroundColor(index: number){

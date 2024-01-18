@@ -27,9 +27,9 @@ export class PersonalDataComponent implements OnInit{
 
   backGroundClass(odd: boolean){
     if(odd){
-      return {'background-color': 'lightgrey'};
+      return {'background-color': 'rgba(220, 220, 220, 0.699)'};
     }else{
-      return {'background-color':'lightblue'};
+      return {'background-color':'#80bdee'};
     }
   }
 
