@@ -12,5 +12,6 @@ namespace webapi.Models
     {
         [Key] public int Id { get; set; }
         public string detail { get; set; }
+        public int IdEducationData { get; set; }
     }
 }
