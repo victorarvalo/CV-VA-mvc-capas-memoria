@@ -119,7 +119,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Colegio Interamericano",
                     starDate = "02/02/1988",
                     finishDate = "31/11/1999",
-                    summary = ""
+                    summary = "",
+                    certificate = true
                 },
                 new Models.EducationData
                 {
@@ -129,7 +130,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Universidad de La Salle",
                     starDate = "01/02/2000",
                     finishDate = "27/04/2012",
-                    summary = ""
+                    summary = "",
+                    certificate = true
                 },
                 new Models.EducationData
                 {
@@ -139,7 +141,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "KOE Knowledge of English",
                     starDate = "02/02/2023",
                     finishDate = null,
-                    summary = "Nivel: B2"
+                    summary = "Nivel: B2",
+                    certificate = null
                 },
                 new Models.EducationData
                 {
@@ -149,7 +152,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Sena - Bogotá",
                     starDate = null,
                     finishDate = "01/12/2007",
-                    summary = null
+                    summary = null,
+                    certificate = null
                 },
                 new Models.EducationData
                 {
@@ -159,7 +163,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Sena - Bogotá",
                     starDate = null,
                     finishDate = "15/12/2007",
-                    summary = null
+                    summary = null,
+                    certificate = null
                 },
                 new Models.EducationData
                 {
@@ -169,7 +174,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Sena - Bogotá",
                     starDate = null,
                     finishDate = "15/12/2007",
-                    summary = null
+                    summary = null,
+                    certificate = null
                 },
                 new Models.EducationData
                 {
@@ -179,7 +185,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Sena - Bogotá",
                     starDate = null,
                     finishDate = "01/05/2008",
-                    summary = null
+                    summary = null,
+                    certificate = null
                 },
                 new Models.EducationData
                 {
@@ -189,7 +196,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Sena - Bogotá",
                     starDate = null,
                     finishDate = "15/05/2008",
-                    summary = null
+                    summary = null,
+                    certificate = null
                 },
                 new Models.EducationData
                 {
@@ -199,7 +207,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Sena - Bogotá",
                     starDate = null,
                     finishDate = "01/06/2008",
-                    summary = null
+                    summary = null,
+                    certificate = null
                 },
                 new Models.EducationData
                 {
@@ -209,7 +218,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Sena - Bogotá",
                     starDate = null,
                     finishDate = "15/09/2008",
-                    summary = null
+                    summary = null,
+                    certificate = null
                 },
                 new Models.EducationData
                 {
@@ -219,7 +229,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Angular University",
                     starDate = null,
                     finishDate = "01/10/2023",
-                    summary = null
+                    summary = null,
+                    certificate = null
                 },
                 new Models.EducationData
                 {
@@ -229,7 +240,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Udemy",
                     starDate = null,
                     finishDate = "01/11/2023",
-                    summary = null
+                    summary = null,
+                    certificate = null
                 },
                 new Models.EducationData
                 {
@@ -239,17 +251,19 @@ namespace webapi.PersistenceContext.Data
                     institution = "Udemy",
                     starDate = null,
                     finishDate = "14/11/2023",
-                    summary = null
+                    summary = null,
+                    certificate = null
                 },
                 new Models.EducationData
                 {
                     IdTypeTraining = 2,
                     IdModalityTraining = 2,
-                    title = "CreateServerlessApplications",
+                    title = "Create Serverless Applications",
                     institution = "Coursera - Microsoft",
                     starDate = null,
                     finishDate = "15/03/2024",
-                    summary = null
+                    summary = null,
+                    certificate = true
                 },
                 new Models.EducationData
                 {
@@ -259,7 +273,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Coursera - Microsoft",
                     starDate = null,
                     finishDate = "16/03/2024",
-                    summary = null
+                    summary = null,
+                    certificate = true
                 },
                 new Models.EducationData
                 {
@@ -269,7 +284,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Coursera - Microsoft",
                     starDate = null,
                     finishDate = "20/03/2024",
-                    summary = null
+                    summary = null,
+                    certificate = true
                 },
                 new Models.EducationData
                 {
@@ -279,7 +295,8 @@ namespace webapi.PersistenceContext.Data
                     institution = "Coursera - Microsoft",
                     starDate = null,
                     finishDate = "21/03/2024",
-                    summary = null
+                    summary = null,
+                    certificate = true
                 }
             );
 
