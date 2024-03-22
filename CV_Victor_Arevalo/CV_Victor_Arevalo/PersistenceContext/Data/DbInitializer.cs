@@ -139,7 +139,7 @@ namespace webapi.PersistenceContext.Data
                     institution = "KOE Knowledge of English",
                     starDate = "02/02/2023",
                     finishDate = null,
-                    summary = "Nivel: C2"
+                    summary = "Nivel: B2"
                 },
                 new Models.EducationData
                 {
@@ -239,6 +239,46 @@ namespace webapi.PersistenceContext.Data
                     institution = "Udemy",
                     starDate = null,
                     finishDate = "14/11/2023",
+                    summary = null
+                },
+                new Models.EducationData
+                {
+                    IdTypeTraining = 2,
+                    IdModalityTraining = 2,
+                    title = "CreateServerlessApplications",
+                    institution = "Coursera - Microsoft",
+                    starDate = null,
+                    finishDate = "15/03/2024",
+                    summary = null
+                },
+                new Models.EducationData
+                {
+                    IdTypeTraining = 2,
+                    IdModalityTraining = 2,
+                    title = "Connect Your Services with Microsoft Azure Service Bus",
+                    institution = "Coursera - Microsoft",
+                    starDate = null,
+                    finishDate = "16/03/2024",
+                    summary = null
+                },
+                new Models.EducationData
+                {
+                    IdTypeTraining = 2,
+                    IdModalityTraining = 2,
+                    title = "Data Storage in Microsoft Azure for Associate Developers",
+                    institution = "Coursera - Microsoft",
+                    starDate = null,
+                    finishDate = "20/03/2024",
+                    summary = null
+                },
+                new Models.EducationData
+                {
+                    IdTypeTraining = 2,
+                    IdModalityTraining = 2,
+                    title = "Deploy a website with Azure Virtual Machines",
+                    institution = "Coursera - Microsoft",
+                    starDate = null,
+                    finishDate = "21/03/2024",
                     summary = null
                 }
             );
