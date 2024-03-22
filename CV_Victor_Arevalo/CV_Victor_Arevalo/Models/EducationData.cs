@@ -10,7 +10,7 @@ namespace webapi.Models
 {
     public class EducationData
     {
-        [Key] 
+        [Key]
         public int IdEducationData { get; set; }
         public int? IdTypeTraining { get; set; }
 
@@ -20,5 +20,6 @@ namespace webapi.Models
         public string? starDate { get; set; }
         public string? finishDate { get; set; }
         public string? summary { get; set; }
+        public bool? certificate { get; set; }
     }
 }
