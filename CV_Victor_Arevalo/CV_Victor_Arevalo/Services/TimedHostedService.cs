@@ -22,25 +22,38 @@ namespace webapi.Services
         public Task StartAsync(CancellationToken cancellationToken)
         {
             _logger.LogInformation("Timed Hosted Service running.");
-
-            _timer = new Timer(DoWork, null, TimeSpan.Zero,
+            try
+            {
+                _timer = new Timer(DoWork, null, TimeSpan.Zero,
                 TimeSpan.FromSeconds(540));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation("Exception: " + ex.ToString());
+            }
+            
 
             return Task.CompletedTask;
         }
 
         private void DoWork(object state)
         {
-            var count = Interlocked.Increment(ref executionCount);
+            try
+            {
+                var count = Interlocked.Increment(ref executionCount);
 
-            _logger.LogInformation(
-                "Timed Hosted Service is working. Count: {Count}", count);
+                _logger.LogInformation(
+                    "Timed Hosted Service is working. Count: {Count}", count);
 
-            HttpClient httpClient = new HttpClient();
-            var response = httpClient.GetAsync("https://hvvamemoria.azurewebsites.net/api/personalData");
-            var content = response.Result.Content.ReadAsStringAsync().Result;
-            _logger.LogInformation(content);
-
+                HttpClient httpClient = new HttpClient();
+                var response = httpClient.GetAsync("https://hvvamemoria.azurewebsites.net/api/personalData");
+                var content = response.Result.Content.ReadAsStringAsync().Result;
+                _logger.LogInformation(content);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogInformation("Exception: " + ex.ToString());
+            }
         }
 
         public Task StopAsync(CancellationToken cancellationToken)
